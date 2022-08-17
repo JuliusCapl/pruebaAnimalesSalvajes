@@ -1,3 +1,3 @@
-import imagenes from "./imagenes";
+import imagenes from "./imagenes.js";
 
-imagenes();
+imagenes.Animales();
