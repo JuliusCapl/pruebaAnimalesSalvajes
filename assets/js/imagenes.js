@@ -9,31 +9,21 @@ const imagenes = (() => {
         searchAndWriteImg(espacio, animalitos, animales);
 
     });
-
+    
     const searchAndWriteImg = (espacio, animalitos, animales) => {
-        Promise.all([animales])
-        .then(resp => {
-                try {
-                    resp.forEach(a => {
-                        a.animales.forEach(a => {
-                            if (a.name == animalitos) {
-                                return espacio.innerHTML = `<img class="card-img-bottom" src="/assets/imgs/${a.imagen}"/>`
-                            }
+        try {
+            animales.animales.forEach(a => {                
+                    if (a.name == animalitos) {
+                        return espacio.innerHTML = `<img class="card-img-bottom" src="/assets/imgs/${a.imagen}"/>`
+                    }                
+            });
 
-                        })
-                    });
-
-                } catch (e) {
-                    console.log(e);
-                }
-
-            })
-            .catch((e) => {
-                console.log(e);
-            })
+        } catch (e) {
+            console.log(e);
+        }   
     }
 
-})();
+}) ();
 
 export default imagenes;
 
