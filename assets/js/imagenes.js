@@ -1,5 +1,7 @@
-import Animales from "./consulta.js";
+import Animales from "./consulta.js"; 
 
+
+//Trae las imagenes y las inyecta al preview
 const imagenes = (() => {
     document.getElementById("animal").addEventListener("change", async () => {
         let espacio = document.getElementById("preview");
@@ -14,7 +16,7 @@ const imagenes = (() => {
         try {
             animales.animales.forEach(a => {                
                     if (a.name == animalitos) {
-                        return espacio.innerHTML = `<img class="card-img-bottom" src="/assets/imgs/${a.imagen}"/>`
+                        return espacio.setAttribute("style",`background-image:url(./assets/imgs/${a.imagen}`) 
                     }                
             });
 

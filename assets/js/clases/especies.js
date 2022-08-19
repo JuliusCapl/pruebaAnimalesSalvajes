@@ -1,11 +1,12 @@
-import Animal from "./animal";
+import Animal from "./animal.js";
 
+//subclases
 class Leon extends Animal {
     constructor(nombre,edad,img,comentarios,sonido){
         super(nombre,edad,img,comentarios,sonido)
     }
     rugir(){
-        console.log("rugido")
+        console.log("rugido");
     }
 }
 class Lobo extends Animal {
@@ -40,3 +41,5 @@ class Aguila extends Animal {
         console.log("chillido")
     }
 }
+
+export {Leon, Lobo, Oso, Serpiente, Aguila};
